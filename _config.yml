@@ -33,9 +33,9 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 # Site owner
 owner:
   name: Sergio Pino
-  avatar: bio-photo.jpg
+  avatar: spbio-photo.jpg
   email: spino327@gmail.com
-  disqus-shortname:
+  disqus-shortname: spino327-github-io
   twitter: #username
   facebook: #username
   github: spino327
