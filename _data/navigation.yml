@@ -3,11 +3,14 @@
 - title: About
   url: /about/
 
-- title: Articles
-  url: /articles/
-
 - title: Blog
   url: /blog/
+
+#- title: Articles
+#  url: /articles/
+
+- title: Ph.D Research
+  url: /research/
 
 - title: CAPSL
   url: http://www.capsl.udel.edu/
