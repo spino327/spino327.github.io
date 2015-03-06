@@ -2,6 +2,10 @@
 layout: page
 title: Blog
 excerpt: "An archive of blog posts sorted by date."
+image:
+  feature: general/guajira.JPG
+  credit: Camarones, Guajira (Colombia) by Sergio Pino
+  creditlink: http://www.colombiaestuya.com
 ---
 
 <ul class="post-list">

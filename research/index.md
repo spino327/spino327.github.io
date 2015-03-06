@@ -3,6 +3,10 @@ layout: page
 title: Ph.D Research
 excerpt: "Information about my researh."
 date: 2015-02-24T14:06:11-05:00
+image:
+  feature: general/cabo_la_vela2.JPG
+  credit: Cabo de la Vela, Guajira (Colombia) by Sergio Pino
+  creditlink: http://www.colombiaestuya.com
 ---
 
 ## Advisors only

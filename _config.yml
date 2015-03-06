@@ -3,7 +3,7 @@
 title: Sergio Pino 
 locale: en_US
 description: Blog, research, interests, and more.
-logo: site-logo.png
+logo: # site-logo.png
 favicon: devtool.ico
 search: true
 #url: http://spino327.github.io
@@ -47,7 +47,7 @@ owner:
   tumblr: #username
   google:
     plus: #username
-    analytics:
+    analytics: UA-30337201-2
     verify:
     ad-client:
     ad-slot: 
