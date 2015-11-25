@@ -3,7 +3,7 @@ layout: post
 title: "About the One Page Research Proposal"
 modified:
 categories: blog
-excerpt: "Some examples and resourcers about the one page proposal"
+excerpt: "Some examples and resources about the one page proposal"
 tags: [phd]
 image:
   feature:
