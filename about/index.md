@@ -4,6 +4,7 @@ title: About Sergio Pino
 excerpt: "Some information about Sergio Pino."
 date: 2014-11-24T19:44:38.564948-04:00
 modified: 2015-02-26T19:44:38.564948-04:00
+search: true
 image:
   feature: general/salento_3.JPG
   credit: Valle de Cocora, Quindío (Colombia) by Hernando Pino
