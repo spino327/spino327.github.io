@@ -1,13 +1,13 @@
 # Site wide configuration
 
-title: Sergio Pino 
+title: Sergio Pino
 locale: en_US
 description: Blog, research, interests, and more.
 logo: # site-logo.png
 favicon: devtool.ico
 search: true
 url: http://spino327.github.io
-#url:
+#url: http://localhost:4000
 
 # Jekyll configuration
 
@@ -52,5 +52,5 @@ owner:
     analytics: UA-30337201-2
     verify:
     ad-client:
-    ad-slot: 
+    ad-slot:
   bing-verify:
