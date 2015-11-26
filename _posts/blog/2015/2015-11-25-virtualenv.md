@@ -19,7 +19,13 @@ You can install *virtualenv* using pip by `[sudo] pip install virtualenv`.
 Then, for the basic usage you'll need to do two steps
 
 1. `$ virtualenv ENV_PATH`, where *ENV_PATH* is a directory where the new virtual environment will be placed. The new environment will have *pip* and *setuptools* installed.
-2. You will need to source your new environment by `$ source bin/activate`
+2. You will need to source your new environment by `$ source ENV_PATH/bin/activate`
+
+Example:
+{% highlight bash %}
+$ virtualenv venv
+$ source venv/bin/activate
+{% endhighlight %}
 
 ### tested with
 * OS X 10.11.1
