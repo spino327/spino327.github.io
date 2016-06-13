@@ -12,8 +12,8 @@
 - title: Ph.D Research
   url: /research/
 
-- title: CAPSL
-  url: http://www.capsl.udel.edu/
+#- title: CAPSL
+#url: http://www.capsl.udel.edu/
 
-#- title: Search
-#  url: /search/
+- title: Search
+  url: /search/

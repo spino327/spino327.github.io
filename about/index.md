@@ -11,20 +11,22 @@ image:
   creditlink: http://www.colombiaestuya.com
 ---
 
-I'm a PhD student in the <a href="http://www.ece.udel.edu" target="null">Electrical and Computer Engineering department</a> at the <a href="http://www.udel.edu" target="null">University of Delaware</a>, under the direction of <a href="http://www.ece.udel.edu/research/by-faculty.Guang.Gao.html" target="null">*Dr. Guang R. Gao*</a> and <a href="http://www.cis.udel.edu/~pollock" target="null">*Dr. Lori Pollock*</a>. I'm a member of the <a href="http://www.capsl.udel.edu" target="null">*Computer Architecture and Parallel Systems Laboratory (CAPSL)*</a>. 
-
+I'm a PhD student in the <a href="http://www.cis.udel.edu/" target="null">Department of Computer and Information Sciences</a> at the <a href="http://www.udel.edu" target="null">University of Delaware</a>, under the direction of <a href="http://www.cis.udel.edu/~pollock" target="null">*Dr. Lori Pollock*</a> and <a href="https://www.cis.udel.edu/~schandra" target="null">*Dr. Sunita Chandrasekaran*</a>. I’m a member of the both the <a href="https://hiper.cis.udel.edu/doku.php/about" target="null">Software Analysis and Compilation Research Lab</a> and the Computational Research and Programming Lab (CRPL).
 
 ### Research interest:
 
-* Big data and Parallel Programming.
 * Compilers and Runtime Software Technologies.
+* Parallel Programming and Big data.
 * Software Engineering.
  
 ### Contact information:
 
 | E-mail:  | sergiop at udel dot edu   |
-| Address:  | DuPont Hall, Office 334. Newark, DE 19716   |
+| Address:  | Smith Hall, Office 221. Newark, DE 19716   |
+
+<!--
 | Office Phone: | +1-302-831-3276   |
+-->
 
 <!--
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
