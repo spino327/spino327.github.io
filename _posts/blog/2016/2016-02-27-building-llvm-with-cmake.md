@@ -124,6 +124,10 @@ if [ "$phase" == "ninja_install" ]; then
 fi
 {% endhighlight %}
 
+## Scripts
+
+I'm hosting the scripts in github at <a target="null" href="https://github.com/spino327/llvm_clang_install">https://github.com/spino327/llvm_clang_install</a>.
+
 ## Tested with...
 
 * OSX 10.11.6
