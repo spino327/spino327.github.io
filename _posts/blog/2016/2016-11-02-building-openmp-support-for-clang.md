@@ -3,7 +3,7 @@ layout: post
 title: Building OpenMP Support for Clang
 modified:
 categories: blog
-excerpt: 
+excerpt: "OpenMP support for clang/llvm (3.9.0)"
 tags: [clang, llvm, openmp]
 image:
   feature:
