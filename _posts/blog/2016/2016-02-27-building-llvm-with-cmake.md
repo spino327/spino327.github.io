@@ -13,6 +13,9 @@ comments: true
 
 In this post we'll build clang and llvm (3.9.0) from the release source code. 
 
+* Table of Contents
+{:toc}
+
 ## How to...
 
 The following sections use bash scripts to download and install llvm/clang. It should work with linux and osx.
