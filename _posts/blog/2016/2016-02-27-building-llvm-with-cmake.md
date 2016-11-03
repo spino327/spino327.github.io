@@ -3,14 +3,15 @@ layout: post
 title: Building LLVM With Cmake
 modified: 2016-11-02T22:32:49-05:00
 categories: blog
-excerpt: ""
+excerpt: "Build clang and llvm (3.9.0) from the release source code"
 tags: [clang, llvm]
 image:
   feature:
 date: 2016-02-27T22:32:49-05:00
+comments: true
 ---
 
-In this post we'll build clang and llvm (3.9.0) from the release source code.
+In this post we'll build clang and llvm (3.9.0) from the release source code. 
 
 ## How to...
 
@@ -84,7 +85,7 @@ echo Moving openmp src to oot
 [ ! -d "llvm-out-of-tree/openmp" ] && (mv -v openmp-$VERSION.src llvm-out-of-tree/openmp)
 {% endhighlight %}
 
-### Compile with CMake and ninja
+### Compile CLANG/LLVM with CMake and ninja
 
 Similarly, we use a bash script to compile the llvm source code using cmake and ninja. Ninja is similar to gnu make but it claims that it is faster on large code base projects (as in the case of clang/llvm). Notice that we're creating an eclipse project so that you can import it for development with eclipse. You can check the available and supported CMake Generators <a target="null" href="https://cmake.org/cmake/help/v3.6/manual/cmake-generators.7.html">here</a>.
 
