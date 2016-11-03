@@ -11,7 +11,7 @@ date: 2016-11-02T21:34:50-04:00
 comments: true
 ---
 
-In this post we'll build the OpenMP support for clang/llvm (3.9.0) from the release source code. We covered how to download and install clang/llvm in a [building llvm with cmake]({% post_url 2016-02-27-building-llvm-with-cmake %}).
+In this post we'll build the OpenMP support for clang/llvm (3.9.0) from the release source code. I assume that clang/llvm is already installed as we covered in [building llvm with cmake]({% post_url 2016-02-27-building-llvm-with-cmake %}).
 
 ## How to...
 
@@ -59,6 +59,23 @@ fi
 if [ "$phase" == "ninja_install" ]; then
 	ninja install $dry_run -v
 fi
+{% endhighlight %}
+
+## Setting up the bash environment variables to work with this installation.
+
+To use correctly clang/llvm with the openmp libraries you'll need to export the following variables. I'm using a simple tool to source user-defined environments <a target="null" href="https://github.com/spino327/sourcing_tool">sourcing_tool</a>. The following example should work on osx.
+
+{% highlight bash %}
+VERSION=3.9.0
+export LLVM_HOME=$HOME/opt/llvm
+export LLVM_BUILD=$HOME/local/llvm-build
+export LLVM_OOT=$HOME/opt/llvm-oot
+export PATH=$LLVM_HOME/bin:$PATH
+#export LLVM_LIB_SEARCH_PATH=$LLVM_HOME/lib
+export C_INCLUDE_PATH=$LLVM_HOME/include:$LLVM_HOME/lib/clang/$VERSION/include:$LLVM_OOT/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$LLVM_HOME/include:$LLVM_HOME/lib/clang/$VERSION/include:$LLVM_OOT/include:$LLVM_HOME/include/c++/v1:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=$LLVM_HOME/lib:$LLVM_OOT/lib:$LIBRARY_PATH
+export DYLD_LIBRARY_PATH=$LLVM_HOME/lib:$LLVM_OOT/lib:$DYLD_LIBRARY_PATH
 {% endhighlight %}
 
 ## Scripts

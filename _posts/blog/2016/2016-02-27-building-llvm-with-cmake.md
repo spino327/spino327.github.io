@@ -125,6 +125,23 @@ if [ "$phase" == "ninja_install" ]; then
 fi
 {% endhighlight %}
 
+## Setting up the bash environment variables to work with this installation.
+
+To use clang/llvm you'll need to export the following variables. I'm using a simple tool to source user-defined environments <a target="null" href="https://github.com/spino327/sourcing_tool">sourcing_tool</a>. The following example should work on osx.
+
+{% highlight bash %}
+VERSION=3.9.0
+export LLVM_HOME=$HOME/opt/llvm
+export LLVM_BUILD=$HOME/local/llvm-build
+export LLVM_OOT=$HOME/opt/llvm-oot
+export PATH=$LLVM_HOME/bin:$PATH
+#export LLVM_LIB_SEARCH_PATH=$LLVM_HOME/lib
+export C_INCLUDE_PATH=$LLVM_HOME/include:$LLVM_HOME/lib/clang/$VERSION/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$LLVM_HOME/include:$LLVM_HOME/lib/clang/$VERSION/include:$LLVM_HOME/include/c++/v1:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=$LLVM_HOME/lib:$LIBRARY_PATH
+export DYLD_LIBRARY_PATH=$LLVM_HOME/lib:$DYLD_LIBRARY_PATH
+{% endhighlight %}
+
 ## Scripts
 
 I'm hosting the scripts in github at <a target="null" href="https://github.com/spino327/llvm_clang_install">https://github.com/spino327/llvm_clang_install</a>.
