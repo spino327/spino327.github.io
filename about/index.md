@@ -11,7 +11,7 @@ image:
   creditlink: http://www.colombiaestuya.com
 ---
 
-I'm a PhD student in the <a href="http://www.cis.udel.edu/" target="null">Department of Computer and Information Sciences</a> at the <a href="http://www.udel.edu" target="null">University of Delaware</a>, under the direction of <a href="http://www.cis.udel.edu/~pollock" target="null">*Dr. Lori Pollock*</a> and <a href="https://www.cis.udel.edu/~schandra" target="null">*Dr. Sunita Chandrasekaran*</a>. I’m a member of the both the <a href="https://hiper.cis.udel.edu/doku.php/about" target="null">Software Analysis and Compilation Research Lab</a> and the Computational Research and Programming Lab (CRPL).
+I'm a PhD student in the <a href="http://www.cis.udel.edu/" target="null">Department of Computer and Information Sciences</a> at the <a href="http://www.udel.edu" target="null">University of Delaware</a>, under the direction of <a href="http://www.cis.udel.edu/~pollock" target="null">*Dr. Lori Pollock*</a> and <a href="https://www.cis.udel.edu/~schandra" target="null">*Dr. Sunita Chandrasekaran*</a>. I’m a member of the both the <a href="https://hiper.cis.udel.edu/doku.php/about" target="null">Software Analysis and Compilation Research Lab</a> and the <a href="http://crpl.cis.udel.edu/" target="null">Computational Research and Programming Lab (CRPL)</a>.
 
 ### Research interest:
 
