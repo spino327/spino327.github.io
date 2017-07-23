@@ -1,0 +1,48 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Powered by 
+      <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>.
+    </span>
+
+    {% if site.author.github %}
+    <a href="https://github.com/{{ site.author.github }}" title="{{ site.author.name}} on Github" target="_blank">
+      <i class="fa fa-github-square fa-lg"></i>
+    </a>
+    {% endif %}
+    
+    {% if site.author.linkedin %}
+    <a href="https://linkedin.com/in/{{ site.author.linkedin }}" title="{{ site.author.name}} on LinkedIn" target="_blank">
+      <i class="fa fa-linkedin-square fa-lg"></i>
+    </a>
+    {% endif %}
+    
+    {% if site.author.twitter %}
+    <a href="https://twitter.com/{{ site.author.twitter }}" title="{{ site.author.name}} on Twitter" target="_blank">
+      <i class="fa fa-twitter-square fa-lg"></i>
+    </a>
+    {% endif %}
+    
+    {% if site.author.facebook %}
+    <a href="https://facebook.com/{{ site.author.facebook }}" title="{{ site.author.name}} on Facebook" target="_blank">
+      <i class="fa fa-facebook-square fa-lg"></i>
+    </a>
+    {% endif %}
+    
+    {% if site.author.google.plus %}
+    <a href="https://plus.google.com/+{{ site.author.google.plus }}" title="{{ site.author.name}} on Google+" target="_blank">
+      <i class="fa fa-google-plus-square fa-lg"></i>
+    </a>
+    {% endif %}
+    
+    {% if site.author.stackexchange %}
+    <a href="{{ site.author.stackexchange }}" title="{{ site.author.name}} on StackExchange" target="_blank">
+      <i class="fa fa-stack-exchange fa-lg"></i>
+    </a>
+    {% endif %}
+
+    <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">
+      <i class="fa fa-rss-square fa-lg"></i>
+    </a>
+  </div>
+  <p hidden="on">{{ site.description | escape }}</p>
+</footer>
