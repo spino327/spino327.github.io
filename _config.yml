@@ -20,8 +20,9 @@ description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: http://spino327.github.io
 
 # twitter_username: jekyllrb
 #github_username:  spino327
@@ -31,13 +32,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 author:
   name     : "Sergio Pino"
   job      : "Software Engineer"
-  bio      : "1+1=3 is always TRUE in my world, a balance between binary and reality."
-  thumb    : /images/author.jpg
+  bio      : ""
+  thumb    : 
   email    : spino327@gmail.com
   url      : http://spino327.github.io/
   github   : spino327
   twitter  : Sergio_Pino_G
-#  facebook : 
   linkedin : sergiopino
   google:
     plus: #username
@@ -48,9 +48,21 @@ author:
 
 # Build settings
 markdown: kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
 #theme: minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
+
+# Paginate
+paginate: 5
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -63,4 +75,3 @@ gems:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
