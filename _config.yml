@@ -24,10 +24,6 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 url: http://spino327.github.io
 
-# twitter_username: jekyllrb
-#github_username:  spino327
-#linkedin_username: sergiopino
-
 # Author settings
 author:
   name     : "Sergio Pino"
@@ -62,6 +58,7 @@ gems:
   - jekyll-paginate
 
 # Paginate
+paginate_path: "/blog/page:num/"
 paginate: 5
 
 # Exclude from processing.
