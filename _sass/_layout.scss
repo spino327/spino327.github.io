@@ -1,0 +1,108 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/*
+ * Globals
+ */
+
+/* Links */
+a {
+  color: $gray-color-dark;  
+  text-shadow: 1px 1px 5px $gray-color-light;
+}
+a:focus,
+a:hover {
+  color: $blue-color;
+  text-shadow: none;
+}
+
+//html,
+//body {
+//  height: 100%;
+//  background-color: #333;
+//}
+//body {
+//  color: #fff;
+//  text-align: center;
+//  text-shadow: 0 1px 20px rgba(0,0,0,.5);
+//}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-item {
+  margin-bottom: 0.2em;
+  display: block;
+
+//  a {
+//    color: $action-color;
+//    font-weight: bold;
+//  }
+
+  .article-title {
+    display: inline-block;
+    width: 85%;
+    //border-bottom: 1px dashed lighten($light-gray-color, 10%);
+  }
+
+//  .date-label {
+//    //border: 1px solid lighten($light-gray-color, 10%);
+//    padding: 0 0.2em;
+//    margin-left: 1em;
+//    margin-top: 2px;
+//    @extend .pull-right;
+//  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $gray-color;
+}
+
+.post-link {
+  display: block;
+  @include relative-font-size(1.1);
+}

@@ -1,20 +1,34 @@
+---
+common-css: 
+  - "/assets/css/bootstrap.min.css"
+  - "/assets/css/ie10-viewport-bug-workaround.css"
+  - "/assets/main.css"
+common-js:
+  - "/assets/js/jquery-3.2.1.min.js"
+  - "/assets/js/bootstrap.min.js"
+  - "/assets/js/main.js"
+---
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
 
+  {% if page.toc == "true" %}
+  <body data-spy="scroll" data-target="#toc">
+  {% else %}
   <body>
+  {% endif %}
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
+    <!-- Begin page content -->
+    <div class="container">
+      {{ content }}
+    </div>
+    
     {% include footer.html %}
 
+    {% include footer-scripts.html %}
   </body>
 
 </html>

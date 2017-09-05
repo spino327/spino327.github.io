@@ -1,45 +1,15 @@
-
-{% if layout.common-ext-js %}
-  {% for js in layout.common-ext-js %}
-	<script src="{{ js }}"></script>
+<!--CSS-->
+{% if layout.common-css %}
+  {% for css in layout.common-css %}
+  <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
   {% endfor %}
 {% endif %}
-
-
-{% if page.common-js %}
-  {% for js in page.common-js %}
-	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+{% if page.css %}
+  {% for css in page.css %}
+  <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
   {% endfor %}
 {% endif %}
-{% if layout.common-js %}
-  {% for js in layout.common-js %}
-	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
-  {% endfor %}
-{% endif %}
-
-{% if page.ext-js %}
-  {% for js in page.ext-js %}
-	<script src="{{ js }}"></script>
-  {% endfor %}
-{% endif %}
-
-{% if page.js %}
-  {% for js in page.js %}
-	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
-  {% endfor %}
-{% endif %}
-
-{% if layout.common-js %}
-  {% for js in layout.common-js %}
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    {% if js contains 'jquery' %}
-      <script>
-      	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="{{ js | prepend: site.baseurl | replace: "//", "/" }}"></scr' + 'ipt>');
-      	}
-      </script>
-    {% else %}
-	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
-    {% endif %}
-  {% endfor %}
+{% if page.toc == "true" %}
+  <!-- bootstrap TOC -->
+  <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
 {% endif %}

@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
+  
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -15,10 +15,35 @@ layout: default
       {% endif %}</p>
   </header>
 
+  <!-- main content area -->
   <div class="post-content" itemprop="articleBody">
-    {{ content }}
+  {% if page.toc == "true" %}
+    <div
+    <!-- sidebar, which will move to the top on a small screen -->
+    <div class="col-sm-3 col-md-3">
+      <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+    </div>
+    <div class="col-sm-9 col-md-9">
+  {% else %}
+    <div class="col-md-12">
+  {% endif %}   
+      {{ content }}
+    </div>
   </div>
-
+  
+  <div class="container">
+    <div class="col-xs-12 col-md-12">
+    <p class="text-center">
+      {% if page.previous %}
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn btn btn-default" role="button" title="{{ page.previous.title }}">Previous</a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn btn btn-default" role="button" title="{{ page.next.title }}">Next</a>
+      {% endif %}
+    </p>
+    </div>
+    </div>
+<!--  </nav>-->
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}

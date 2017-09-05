@@ -2,13 +2,9 @@
 
 // Import partials.
 @import
-  "bourbon/bourbon",
   "font-awesome/font-awesome",
-  "minima/variables",
-  "minima/mixins",
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting",
-  "minima/tables",
-  "minima/typography"
+  "mixins",
+  "variables",
+  "layout",
+  "buttons"
 ;

@@ -1,0 +1,15 @@
+<!--JS-->
+{% if layout.common-js %}
+  {% for js in layout.common-js %}
+  <script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+  {% endfor %}
+{% endif %}
+{% if page.js %}
+  {% for js in page.js %}
+  <script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+  {% endfor %}
+{% endif %}
+{% if page.toc == "true" %}
+  <!-- bootstrap TOC -->
+  <script src="/assets/js/bootstrap-toc.min.js"></script>
+{% endif %}

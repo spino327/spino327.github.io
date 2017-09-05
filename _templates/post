@@ -1,0 +1,10 @@
+---
+layout: {{ layout }}
+title: "{{ title }}"
+date: {{ date }}
+categories: {{ dir }}
+excerpt:
+tags: []
+image:
+  feature:
+---
