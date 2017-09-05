@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
@@ -13,16 +13,16 @@ permalink: /about/
 <!--My experience in different projects has allowed me to acquire skills directly related to software engineering practices, using different programming languages, and in other areas such as distributed computing, machine learning, ....-->
 
 ### Interests:
-
-* Parallel Programming and Big data.
-* Compilers and Runtime Software Technologies.
+* HPC and Big data.
+<!--* Compilers and Runtime Software Technologies.-->
 * Software Engineering.
+* AI and Machine Learning.
 
 I have had the fortune to explore these interests while working with the following distinguished professors and scientists while at University of Delaware:
 
 * Dr. Sunita Chandrasekaran in the Computational Research and Programming Lab (CRPL).  
-* Dr. Lori Pollock in the Software Analysis and Compilation Research Lab.  
-* Dr. Guang Gao in the Computer Architecture and Parallel Computing Lab.  
+<!--* Dr. Lori Pollock in the Software Analysis and Compilation Research Lab.  -->
+* Dr. Guang Gao in the Computer Architecture and Parallel Computing Lab (CAPSL).  
 * Dr. Kristina Winbladh in the Software Engineering Lab.  
  
 ### Contact information:
