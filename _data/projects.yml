@@ -1,0 +1,17 @@
+# Projects
+
+- title: Projects
+  url: /projects/
+  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
+
+- title: Blog
+  url: https://jekyllrb.com/docs/datafiles/
+  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
+
+- title: Blo1
+  url: /blog/
+  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
+
+- title: Blo2
+  url: /blog/
+  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
