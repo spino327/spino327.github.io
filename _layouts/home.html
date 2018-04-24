@@ -3,7 +3,84 @@ layout: default
 ---
 
 <div class="home">
-  
-  {{ content }}
+  <div class="row">
+    <div class="col-sm-8 blog-main">
+    
+      {{ content }}
+      
+    </div><!-- /.blog-main -->
+    
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>{{ site.author.bio }}</p>
+       
+        <table class="table">
+          <tbody> 
+            <tr> 
+              <th scope="row">
+                <a href="{{ site.url }}/projects" class="btn btn-xs btn-block" role="button" title="Projects">Projects</a>
+              </th> 
+            </tr> 
+            <tr> 
+              <th scope="row">
+                <a href="{{ site.url }}/blog" class="btn btn-xs btn-block" role="button" title="Projects">Blog</a>
+              </th> 
+            </tr> 
+            <tr> 
+              <th scope="row">
+                <p class="text-center">
+                  {% if site.author.github %}
+                  <a href="https://github.com/{{ site.author.github }}" title="{{ site.author.name}} on Github" target="_blank">
+                    <i class="fa fa-github-square fa-lg"></i>
+                  </a>
+                  {% endif %}
 
+                  {% if site.author.linkedin %}
+                  <a href="https://linkedin.com/in/{{ site.author.linkedin }}" title="{{ site.author.name}} on LinkedIn" target="_blank">
+                    <i class="fa fa-linkedin-square fa-lg"></i>
+                  </a>
+                  {% endif %}
+
+                  {% if site.author.twitter %}
+                  <a href="https://twitter.com/{{ site.author.twitter }}" title="{{ site.author.name}} on Twitter" target="_blank">
+                    <i class="fa fa-twitter-square fa-lg"></i>
+                  </a>
+                  {% endif %}
+
+                  {% if site.author.facebook %}
+                  <a href="https://facebook.com/{{ site.author.facebook }}" title="{{ site.author.name}} on Facebook" target="_blank">
+                    <i class="fa fa-facebook-square fa-lg"></i>
+                  </a>
+                  {% endif %}
+
+                  {% if site.author.google.plus %}
+                  <a href="https://plus.google.com/+{{ site.author.google.plus }}" title="{{ site.author.name}} on Google+" target="_blank">
+                    <i class="fa fa-google-plus-square fa-lg"></i>
+                  </a>
+                  {% endif %}
+
+                  {% if site.author.stackexchange %}
+                  <a href="{{ site.author.stackexchange }}" title="{{ site.author.name}} on StackExchange" target="_blank">
+                    <i class="fa fa-stack-exchange fa-lg"></i>
+                  </a>
+                  {% endif %}
+
+                  <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed" target="_blank">
+                    <i class="fa fa-rss-square fa-lg"></i>
+                  </a>
+                </p>
+              </th> 
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->    
+          
 </div>
+    
+
+

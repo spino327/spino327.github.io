@@ -53,6 +53,15 @@ a:hover {
   text-shadow: none;
 }
 
+.thumbnail:focus,
+.thumbnail:hover {
+  border-color: $blue-color;
+  text-shadow: $blue-color;
+  
+  .panel-heading {
+    background-color: $blue-color;
+  }
+}
 //html,
 //body {
 //  height: 100%;

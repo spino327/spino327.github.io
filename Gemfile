@@ -28,3 +28,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Octopress
 gem 'octopress', '~> 3.0'
+gem 'jekyll-crosspost-to-medium', '~> 0.1.15' 

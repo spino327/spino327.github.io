@@ -15,11 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Sergio
 title2: Pino
-email: spino327@gmail.com
+email: spino327 at gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Blog on software engineering and building scalable and distributed systems.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: http://spino327.github.io
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -28,10 +26,10 @@ url: http://spino327.github.io
 author:
   name     : "Sergio Pino"
   job      : "Software Engineer"
-  bio      : ""
+  bio      : "Software Engineering. Distributed systems. Big data. Machine learning."
   thumb    : 
   email    : spino327@gmail.com
-  url      : http://spino327.github.io/
+  url      : https://spino327.github.io/
   github   : spino327
   twitter  : spino327
   linkedin : sergiopino
@@ -53,9 +51,10 @@ kramdown:
   enable_coderay: false
 
 #theme: minima
-gems:
+plugins:
   - octopress
   - jekyll-feed
+  - jekyll-crosspost-to-medium
 #  - jekyll-paginate
 
 # Paginate
@@ -65,9 +64,12 @@ gems:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
+exclude:
+  - scripts/
+  - search/
+  - research/  
+  - Gemfile
+  - Gemfile.lock
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
@@ -91,3 +93,12 @@ titlecase: true
 post_template: post
 page_template: page
 draft_template: draft
+
+# jekyll-crosspost-to-medium
+jekyll-crosspost_to_medium:
+  enabled: false
+  cache: .jekyll-crosspost_to_medium
+  status: draft
+  license: cc-40-by
+  text: '<p><i>This article was originally posted <a href="{{ url }}" rel="canonical">on my own site</a>.</i></p>'
+  backdate: true
