@@ -19,7 +19,7 @@ email: spino327 at gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog on software engineering and building scalable and distributed systems.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: http://spino327.github.io
+url: https://spino327.github.io
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
@@ -54,7 +54,7 @@ kramdown:
 plugins:
   - octopress
   - jekyll-feed
-  - jekyll-crosspost-to-medium
+  # - jekyll-crosspost-to-medium
 #  - jekyll-paginate
 
 # Paginate
