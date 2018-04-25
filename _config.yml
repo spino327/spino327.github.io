@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Blog on software engineering and building scalable and distributed systems.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: https://spino327.github.io
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
 author:
@@ -51,8 +51,7 @@ kramdown:
   enable_coderay: false
 
 #theme: minima
-# plugins:
-gems:
+plugins:
   - octopress
   - jekyll-feed
   # - jekyll-crosspost-to-medium

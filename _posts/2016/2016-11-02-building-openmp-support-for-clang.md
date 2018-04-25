@@ -9,7 +9,7 @@ date: 2016-11-02T21:34:50-04:00
 comments: true
 ---
 
-In this post we'll build the OpenMP support for clang/llvm (3.9.0) from the release source code. I assume that clang/llvm is already installed as we covered in [building llvm with cmake]({% post_url /blog/2016/2016-02-27-building-llvm-with-cmake %}).
+In this post we'll build the OpenMP support for clang/llvm (3.9.0) from the release source code. I assume that clang/llvm is already installed as we covered in [building llvm with cmake]({% post_url 2016-02-27-building-llvm-with-cmake %}).
 
 * Table of Contents
 {:toc}
@@ -19,7 +19,7 @@ In this post we'll build the OpenMP support for clang/llvm (3.9.0) from the rele
 The following sections use bash scripts to install the OpenMP support for clang. It should work with linux and osx.
 
 ### Download the source code distribution.
-We cover this in [building llvm with cmake]({% post_url /blog/2016/2016-02-27-building-llvm-with-cmake %}).
+We cover this in [building llvm with cmake]({% post_url 2016-02-27-building-llvm-with-cmake %}).
 
 ### Compile OpenMP support for CLANG/LLVM with CMake and ninja
 

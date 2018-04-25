@@ -17,7 +17,7 @@ In this post we'll setup Clang for out-of-the-tree development (3.9.0).
 
 ## HOW TO
 
-I assume that clang/llvm is already compiled from source and it is installed as we covered in [building llvm with cmake]({% post_url /blog/2016/2016-02-27-building-llvm-with-cmake %}). Lets assume that the path for the llvm installation is `$HOME/opt/llvm`. Make sure you exported the following env to the shell:
+I assume that clang/llvm is already compiled from source and it is installed as we covered in [building llvm with cmake]({% post_url 2016-02-27-building-llvm-with-cmake %}). Lets assume that the path for the llvm installation is `$HOME/opt/llvm`. Make sure you exported the following env to the shell:
 
     VERSION=3.9.0
     export LLVM_HOME=$HOME/opt/llvm
