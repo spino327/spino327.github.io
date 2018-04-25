@@ -51,10 +51,11 @@ kramdown:
   enable_coderay: false
 
 #theme: minima
-plugins:
+# plugins:
+gems:
   - octopress
   - jekyll-feed
-  # - jekyll-crosspost-to-medium
+  - jekyll-crosspost-to-medium
 #  - jekyll-paginate
 
 # Paginate
