@@ -55,7 +55,7 @@ kramdown:
 gems:
   - octopress
   - jekyll-feed
-  - jekyll-crosspost-to-medium
+  # - jekyll-crosspost-to-medium
 #  - jekyll-paginate
 
 # Paginate
