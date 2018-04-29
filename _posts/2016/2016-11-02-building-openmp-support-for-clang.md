@@ -5,7 +5,7 @@ modified:
 categories: blog
 excerpt: "OpenMP support for clang/llvm (3.9.0)"
 tags: [clang, llvm, openmp]
-date: 2016-11-02 21:34:50 -0500
+date: 2016-11-02 12:00:00 -0500
 crosspost_to_medium: true
 comments: true
 ---
