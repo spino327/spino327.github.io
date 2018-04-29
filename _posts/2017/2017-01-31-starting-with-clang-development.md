@@ -7,7 +7,7 @@ tags: [clang, llvm, development]
 categories: blog
 comments: true
 crosspost_to_medium: true
-date: 2017-01-31 16:24:47 -5000
+date: 2017-01-31 16:24:47 -0500
 ---
 
 In this post we'll setup Clang for out-of-the-tree development (3.9.0). 
