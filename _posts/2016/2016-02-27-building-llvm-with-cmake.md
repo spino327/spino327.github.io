@@ -5,7 +5,7 @@ modified: 2016-11-02T22:32:49-05:00
 categories: blog
 excerpt: "Build clang and llvm (3.9.0) from the release source code"
 tags: [clang, llvm]
-date: 2016-02-27T22:32:49-05:00
+date: 2016-02-27 22:32:49 -0500
 crosspost_to_medium: true
 comments: true
 ---
@@ -15,11 +15,11 @@ In this post we'll build clang and llvm (3.9.0) from the release source code.
 * Table of Contents
 {:toc}
 
-## How to...
+### How to...
 
 The following sections use bash scripts to download and install llvm/clang. It should work with linux and osx.
 
-### Download the source code distribution.
+#### Download the source code distribution.
 
 The easiest way is to download the source code from the <a target="null" href="http://llvm.org/releases/download.html#3.9.0">llvm release page</a>.
 
@@ -84,7 +84,7 @@ The following script can be used to download, extract, and copy the llvm source 
     echo Moving openmp src to oot
     [ ! -d "llvm-out-of-tree/openmp" ] && (mv -v openmp-$VERSION.src llvm-out-of-tree/openmp)
 
-### Compile CLANG/LLVM with CMake and ninja
+#### Compile CLANG/LLVM with CMake and ninja
 
 Similarly, we use a bash script to compile the llvm source code using cmake and ninja. Ninja is similar to gnu make but it claims that it is faster on large code base projects (as in the case of clang/llvm). Notice that we're creating an eclipse project so that you can import it for development with eclipse. You can check the available and supported CMake Generators <a target="null" href="https://cmake.org/cmake/help/v3.6/manual/cmake-generators.7.html">here</a>.
 
@@ -122,7 +122,7 @@ Similarly, we use a bash script to compile the llvm source code using cmake and 
       ninja install $dry_run -v
     fi
 
-## Setting up the bash environment variables to work with this installation.
+### Setting up the bash environment variables to work with this installation.
 
 To use clang/llvm you'll need to export the following variables. I'm using a simple tool to source user-defined environments <a target="null" href="https://github.com/spino327/sourcing_tool">sourcing_tool</a>. The following example should work on osx.
 
@@ -137,11 +137,11 @@ To use clang/llvm you'll need to export the following variables. I'm using a sim
     export LIBRARY_PATH=$LLVM_HOME/lib:$LIBRARY_PATH
     export DYLD_LIBRARY_PATH=$LLVM_HOME/lib:$DYLD_LIBRARY_PATH
 
-## Scripts
+### Scripts
 
 I'm hosting the scripts in github at <a target="null" href="https://github.com/spino327/llvm_clang_install">https://github.com/spino327/llvm_clang_install</a>.
 
-## Tested with...
+### Tested with...
 
 * OSX 10.11.6
 * Compiled with Apple LLVM version 7.3.0

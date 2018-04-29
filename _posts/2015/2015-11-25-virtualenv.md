@@ -5,7 +5,7 @@ modified:
 categories: blog
 excerpt: "Using virtualenv to isolate python projects"
 tags: [python]
-date: 2015-11-25T22:20:39-05:00
+date: 2015-11-25 22:20:39 -05:00
 ---
 
 Virtualenv allows you to isolate a python environment for your python project [^1]. This is useful in when several of your projects depend on different versions of the same library, which triggers a problem if you have a system/user wide installation of the particular library. Thus, by isolating the python environment you can install the required version of the library without worrying about whether or not you will break another project.

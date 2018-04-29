@@ -7,7 +7,7 @@ tags: [clang, llvm, development]
 categories: blog
 comments: true
 crosspost_to_medium: true
-date: 2017-01-31T16:24:47-05:00
+date: 2017-01-31 16:24:47 -5000
 ---
 
 In this post we'll setup Clang for out-of-the-tree development (3.9.0). 
@@ -15,7 +15,7 @@ In this post we'll setup Clang for out-of-the-tree development (3.9.0).
 * Table of Contents  
 {:toc}
 
-## HOW TO
+### HOW TO
 
 I assume that clang/llvm is already compiled from source and it is installed as we covered in [building llvm with cmake]({{ site.url }}/blog/2016/02/27/building-llvm-with-cmake.html). Lets assume that the path for the llvm installation is `$HOME/opt/llvm`. Make sure you exported the following env to the shell:
 
@@ -27,13 +27,13 @@ I assume that clang/llvm is already compiled from source and it is installed as 
     export LIBRARY_PATH=$LLVM_HOME/lib:$LIBRARY_PATH
     export DYLD_LIBRARY_PATH=$LLVM_HOME/lib:$DYLD_LIBRARY_PATH  
 
-### Clone the Clang repo.
+#### Clone the Clang repo.
 
 I forked the **clang** repo hosted in <a href="https://github.com/llvm-mirror/clang" target="_blank">github.com/llvm-mirror</a>. You can either clone the repo or fork it.
 
 Since I intent to modify the source code, I located the cloned folder in my preferred location for programming projects (lets say it is at `$HOME/Dev/clang_dev`).
 
-### Adding script to compile the project using cmake and ninja
+#### Adding script to compile the project using cmake and ninja
 
 I created a simple bash script that runs cmake to prepare for compilation and runs ninja for compiling the files. You need to replace `$PATH_TO_INSTALL` with the location of your choice.
 
@@ -64,7 +64,7 @@ I created a simple bash script that runs cmake to prepare for compilation and ru
       ninja install $dry_run -v
     fi
 
-## Tested with...
+### Tested with...
 
 * OSX 10.11.6
 * Compiled with LLVM version 3.9.0 compiled from source code.

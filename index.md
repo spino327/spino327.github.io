@@ -22,7 +22,7 @@ layout: home
         <div class="panel-heading">
           <h3 class="panel-title">
             <span class="post-meta date-label">{{ post.date | date: "%b %d" }}</span>
-            <div class="article-title">{{ post.title }}</div>
+            <div class="article-title"><h3>{{ post.title }}</h3></div>
           </h3>
         </div>
         </a>
