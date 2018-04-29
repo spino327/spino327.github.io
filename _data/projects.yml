@@ -1,17 +1,17 @@
 # Projects
 
-- title: Projects
-  url: /projects/
-  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
+- title: texwatch.sh
+  url: https://github.com/spino327/texwatch.sh
+  description: "A daemon that watch for changes in latex files and recompiles them if it detects a change. It works great if you edit latex files in Vim or other editor without built-in for visualization."
 
-- title: Blog
-  url: https://jekyllrb.com/docs/datafiles/
-  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
+- title: sourcing_tool
+  url: https://github.com/spino327/sourcing_tool
+  description: "Simple bash-based tool to source user-defined environments. Sometimes you need to use different libraries or applications, and potentially you need different versions of those. It can become a mess if you are working on different projects that use different versions of compilers/libraries/... One solution is to use tools like modules or valet, but I don't have time to configure a complex environment management software."
 
-- title: Blo1
-  url: /blog/
-  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
+- title: Training Fraud detection in Hadoop
+  url: https://github.com/spino327/training_fraud_detection_hadoop
+  description: "On-Line Fraud Detection involves identifying a fraud as soon as it has been perpetrated into the system. This technique is only successful by having a training algorithm that can produce a model suitable to be used by a real-time detector. In this project, we will focus on fraud detection for credit card transactions using Markov chains to train the model off-line and a parallel implementation of a concurrent queue for on-line detection."
 
-- title: Blo2
-  url: /blog/
-  description: "In addition to the built-in variables available from Jekyll, you can specify your own custom data that can be accessed via the Liquid templating system. Jekyll supports loading data from YAML, JSON, and CSV files located in the _data directory. Note that CSV files must contain a header row."
+- title: NAS NPB OpenACC_2.5
+  url: https://github.com/spino327/NAS_SHOC_OpenACC_2.5
+  description: "Code repository for the benchmarks discussed in our paper 'Exploring translation of OpenMP to OpenACC 2.5: Lessons Learned'. This paper explores the similarities and the functionality gaps between both models and presents insights into the translation process of constructs from OpenMP to OpenACC."

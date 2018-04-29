@@ -2,7 +2,7 @@
 layout: {{ layout }}
 title: "{{ title }}"
 categories: {{ dir }}
-excerpt:
+excerpt: ""
 tags: []
 image:
   feature:

@@ -23,13 +23,21 @@ common-js:
 
     <!-- Begin page content -->
     <div class="container">
-<!--    <div class="container-fluid"> -->
       {{ content }}
     </div>
     
     {% include footer.html %}
 
     {% include footer-scripts.html %}
+    
+    {% if page.fnc %}
+    <script lang="javascript">
+      // Event when DOM is fully loaded
+      // version: 0
+      var lambdaFnc = {{ page.fnc }}
+      if (lambdaFnc != null)
+        $(document).ready(lambdaFnc);
+    </script>
+    {% endif %}
   </body>
-
 </html>

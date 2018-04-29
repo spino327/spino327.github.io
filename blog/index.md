@@ -19,6 +19,9 @@ excerpt: "An archive of blog posts sorted by date."
       <article class="post-item">
         <span class="post-meta date-label">{{ post.date | date: "%b %d" }}</span>
         <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+        {% if post.excerpt %}
+        <div><span style="margin-left:1em"><small>{{ post.excerpt | truncate: 300 }}</small></span></div>
+        {% endif %}
       </article>
     {% endfor %}
   </div>
