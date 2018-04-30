@@ -33,6 +33,7 @@ author:
   github   : spino327
   twitter  : spino327
   linkedin : sergiopino
+  disqus-shortname: spino327-github-io
   google:
     plus: #username
     analytics: UA-30337201-2
@@ -54,7 +55,7 @@ kramdown:
 plugins:
   - octopress
   - jekyll-feed
-  # - jekyll-crosspost-to-medium
+#  - jekyll-crosspost-to-medium
 #  - jekyll-paginate
 
 # Paginate
@@ -94,7 +95,6 @@ post_template: post
 page_template: page
 draft_template: draft
 
-# jekyll-crosspost-to-medium
 jekyll-crosspost_to_medium:
   enabled: false
   cache: .jekyll-crosspost_to_medium
