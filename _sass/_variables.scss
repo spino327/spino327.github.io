@@ -28,6 +28,7 @@ $blue-color: #6c9ef8;
 
 $gray-color:       #828282 !default;
 $gray-color-light: lighten($gray-color, 40%) !default;
+$gray-color-mid:  lighten($gray-color, 5%) !default;
 $gray-color-dark:  darken($gray-color, 25%) !default;
 
 $text-color:       #5f5f5f !default; //111
