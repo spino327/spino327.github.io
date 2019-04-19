@@ -1,0 +1,105 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Sergio
+title2: Pino
+email: spino327 at gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Blog on software engineering and building scalable and distributed systems.
+# baseurl: "/" # the subpath of your site, e.g. /blog
+# url: https://spino327.github.io
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Author settings
+author:
+  name     : "Sergio Pino"
+  job      : "Software Engineer"
+  bio      : "Software Engineering. Distributed systems. Big data. Machine learning."
+  thumb    : 
+  email    : spino327@gmail.com
+  url      : https://spino327.github.io/
+  github   : spino327
+  twitter  : spino327
+  medium   : spino327
+  linkedin : sergiopino
+  disqus-shortname: spino327-github-io
+  google:
+    plus: #username
+    analytics: UA-30337201-2
+    verify:
+    ad-client:
+    ad-slot:
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+#theme: minima
+plugins:
+  - octopress
+  - jekyll-feed
+#  - jekyll-crosspost-to-medium
+#  - jekyll-paginate
+
+# Paginate
+#paginate_path: "/blog/page:num/"
+#paginate: 5
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - scripts/
+  - search/
+  - research/  
+  - Gemfile
+  - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Octopress
+# Default extension for new posts and pages
+post_ext: md
+page_ext: html
+
+# Default templates for posts and pages
+# Found in _templates/
+post_layout: post
+page_layout: page
+
+# Format titles with titlecase?
+titlecase: true
+
+# Change default template file (in _templates/)
+post_template: post
+page_template: page
+draft_template: draft
+
+jekyll-crosspost_to_medium:
+  enabled: false
+  cache: .jekyll-crosspost_to_medium
+  status: draft
+  license: cc-40-by
+  text: '<p><i>This article was originally posted <a href="{{ url }}" rel="canonical">on my own site</a>.</i></p>'
+  backdate: true
