@@ -19,6 +19,7 @@ help:
 	@echo "  - build: build the site."
 	@echo "  - run: locally runs the site."
 	@echo "  - clean: cleans jekyll project."
+	@echo "  - octopress: creates a new post with <TITLE>. make octopress TITLE=MyTitle"
 	@echo "  - start_docker: start docker container."
 	@echo "  - stop_docker: stop docker container."
 	@echo "  - build_container: make docker container."
@@ -33,6 +34,16 @@ build:
 run:
 	@echo "Runs site locally"
 	- docker exec -w "/site" jekyll_site bundle exec jekyll serve --config _config_local.yml
+
+.PHONY: clean
+clean:
+	@echo "Cleans jekyll project"
+	- docker exec -w "/site" jekyll_site bundle exec jekyll clean
+
+.PHONY: octopress
+octopress:
+	@echo "Creates a new post with <TITLE>"
+	- docker exec -w "/site" jekyll_site ./scripts/octopress.sh "$(TITLE)"
 
 .PHONY: build_container
 build_container:
@@ -55,7 +66,3 @@ stop_docker:
 rm_docker_image: stop_docker
 	@echo "Deleting docker container"
 	- docker container rm jekyll_site
-
-.PHONY: clean
-clean:
-	- bundle exec jekyll clean
