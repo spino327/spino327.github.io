@@ -61,7 +61,7 @@ Flashing the sd-card:
 
 You can find an example of the <a href="https://gist.github.com/spino327/d514212f9f782d786cedf0487854c6f9" target="_blank">user-data.yml</a> 
 
-#### 2.1. Network configuration
+#### 2.1. Network configuration (using a router)
 
 I decided to configure the network interface using static IPs. The idea is to modify the file for `eth0` which is located at `sudo vim /etc/network/interfaces.d/eth0`. As an example this is the setup for *node1*.
 
@@ -79,6 +79,51 @@ I have a small Netgear WNR2020 wireless router dedicated to the Pi cluster, whic
       nameserver 8.8.8.8
       nameserver 8.8.4.4
       nameserver 192.168.2.1
+
+##### 2.1.1 Network configuration (using a switch and head node with NAT)
+
+Recently, I updated the cluster by removing the router. Thus, now the configuration uses a switch to communicate internally with the cluster's nodes.
+Also, I configured the head node to be a NAT. Basically, the head node connects to my wireless network using `wlan0` and serves as NAT through the ethernet interface `eth0`.
+
+###### 2.1.1.1 Head node
+
+First, tell the kernel to enabled IP forwarding by either `echo 1 > /proc/sys/net/ipv4/ip_forward` or by changing the line `net.ipv4.ip_forward=1` in the file `/etc/sysctl.conf`.
+
+Second, make the head node to act as NAT:  
+
+    $ sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+    $ sudo iptables -A FORWARD -i wlan0 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    $ sudo iptables -A FORWARD -i eth0 -o wlan0 -j ACCEPT
+
+We can save the iptable rules and restore them at boot by:
+
+    $ sudo iptables-save > /etc/cluster_ip_rules.fw
+
+Third, I added the configuration for the wireless interface as:
+
+    $ cat /etc/network/interfaces.d/wlan0 
+    auto wlan0
+    iface wlan0 inet dhcp
+        wpa-ssid "Your ssid"
+        wpa-psk "your password"
+        gateway 192.168.1.1
+        post-up iptables-restore < /etc/cluster_ip_rules.fw
+
+###### 2.1.1.2. Slave nodes
+
+In the other nodes, I changed the `eth0` configuration by adding the head node IP as the gateway. So it looks like:  
+
+    $ cat /etc/network/interfaces.d/eth0
+    allow-hotplug eth0
+    #iface eth0 inet dhcp
+    iface eth0 inet static
+        address 192.168.2.13
+        network 192.168.2.0
+        netmask 255.255.255.0
+        broadcast 192.168.2.255
+        gateway 192.168.2.11
+
+make sure that the file `/etc/resolv.conf.head` has the line `nameserver 192.168.1.1` or pointing to your wifi router's IP address.
 
 #### 2.2. Setting up passwordless
 
@@ -124,6 +169,37 @@ Now, you can ssh to `remote` without password. I'm using a Mac laptop so I had t
 ### 3. Docker
 
 There are several docker images for **arm64v8** in the [docker registry](https://hub.docker.com/u/arm64v8/).
+
+### 4. Kubernetes
+
+In the following section, I assume that you're logged as root. If not, then you will need to insert `sudo` in the commands. The end result should be the same.
+
+First, add the encryption key for the packages  
+
+    curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+
+
+Second, add repository  
+
+    echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" >> /etc/apt/sources.list.d/kubernetes.list
+
+Third, in each node install kubernetes
+
+    apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+
+#### 4.1. Configuring the master node
+
+    $ kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address 192.168.2.11
+
+To start using your cluster, you need to run the following as a regular user:  
+
+    mkdir -p $HOME/.kube
+    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+#### 4.2. Configuring the worker nodes
+
+    $ kubeadm join --token=<token> 192.168.2.11
 
 ### References
 
