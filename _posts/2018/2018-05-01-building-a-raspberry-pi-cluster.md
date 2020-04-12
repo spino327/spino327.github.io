@@ -4,7 +4,7 @@ title: "Building a Raspberry Pi Cluster"
 date: 2018-05-01 12:00:00 -0500
 categories: blog
 excerpt: "This post will be updated with my experiences on how to create and maintain a Raspberry Pi cluster, so I will add content over time."
-tags: [raspberry pi, cluster, docker]
+tags: [raspberry pi, cluster, docker, kubernetes]
 comments: true
 ---
 
@@ -197,9 +197,50 @@ To start using your cluster, you need to run the following as a regular user:
     sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
     sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-#### 4.2. Configuring the worker nodes
+#### 4.2. Configuring the network with Flannel
 
-    $ kubeadm join --token=<token> 192.168.2.11
+[Flannel](https://github.com/coreos/flannel) is a simple and easy way to configure a layer 3 network fabric designed for Kubernetes.\
+You just need to apply it to your cluster using `kubectl`:
+
+```sh
+$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
+
+#### 4.3. Configuring the worker nodes
+
+We just need to join our worker nodes using the `kubeadm join` command and passing the token and discovery-token-ca-cert-hash that
+was provided by `kubeadm init`.
+
+```sh
+$ kubeadm join 192.168.2.11:6443 --token=<token> --discovery-token-ca-cert-hash <sha256:...>
+```
+
+#### 4.4. Accessing the cluster 
+
+To access the cluster from a remote machine with `kubectl` you can use `kubectl proxy`. In my case, the master node in the raspberry pi
+cluster has two network interfaces, and I wanted to connect from a machine that is in the external network (external network is `192.168.1.0/24` and the internal network is `192.168.2.0/24`). Thus, running `kubectl proxy` in the master node and passing parameters to use the
+external ip of the master node (in my case `--address=192.168.1.32`) and passing a list of allowed hosts for the IPs in the external network (`--accept-hosts="^192.168.1"`):
+
+```sh
+$ kubectl proxy --port=8080 --address=192.168.1.32 --accept-hosts="^192.168.1"
+```
+
+Then, you can create or add into your desired KUBECONFIG file the following information:
+
+```yaml
+apiVersion: v1
+clusters:
+- cluster:
+    server: http://192.168.1.32:8080
+  name: rpi-cluster
+contexts:
+- context:
+    cluster: rpi-cluster
+  name: rpi
+current-context: rpi
+kind: Config
+preferences: {}
+```
 
 ### References
 
