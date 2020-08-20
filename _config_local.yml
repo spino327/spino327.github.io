@@ -56,7 +56,7 @@ kramdown:
 plugins:
   - octopress
   - jekyll-feed
-#  - jekyll-crosspost-to-medium
+  - jekyll-crosspost-to-medium
 #  - jekyll-paginate
 
 # Paginate
@@ -97,8 +97,8 @@ post_template: post
 page_template: page
 draft_template: draft
 
-jekyll-crosspost_to_medium:
-  enabled: false
+crosspost_to_medium:
+  enabled: true
   cache: .jekyll-crosspost_to_medium
   status: draft
   license: cc-40-by

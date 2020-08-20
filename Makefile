@@ -48,7 +48,7 @@ octopress:
 .PHONY: build_container
 build_container:
 	@echo "Build docker container"
-	- docker run -d --net=host -p 4000:4000 --name jekyll_site -v $(PWD):/site -w "/site" jekyll/jekyll:3.5 top
+	- docker run -d --net=host -p 4000:4000 --env-file $(PWD)/env.list --name jekyll_site -v $(PWD):/site -w "/site" jekyll/jekyll:3.5 top
 	- docker exec -w "/site" jekyll_site bundle install
 	- docker stop jekyll_site
 
